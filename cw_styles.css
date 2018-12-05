@@ -32,6 +32,9 @@ nav#bottom ul li {
     flex: 150px;
 }
 
+/* body {
+    background: linear-gradient(315deg, rgba(73, 73, 73, 0.7)35%, rgba(73, 73, 255, 0.6) 63%);
+} */
 
 /* ===============================
 	Mobile Styles up to 480 pixels
@@ -58,7 +61,7 @@ nav#bottom ul li {
     }
 
     nav#top ul li:nth-of-type(1) {
-        background: url(cw_image01.png) no-repeat;
+        background: url(cw_image01.png) no-repeat fixed;
         width: 100%;
     }
 
@@ -91,11 +94,45 @@ nav#bottom ul li {
         background: url(cw_image07.png) no-repeat;
         width: 100%;
     }
+
+    p#links {
+        display: flex;
+        display: -webkit-flex;
+        flex-flow: nowrap;
+        justify-content: space-around;
+    }
+
+    p#links a {
+        color: rgb(220, 27, 27);
+        border-radius: 20px 10px;
+        text-decoration: none;
+    }
 }
-
-
 
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+
+@media only screen and (min-width: 481px) {
+    article {
+        flex: 2 1 400px;
+    }
+
+    aside {
+        flex: 1 2 200px;
+    }
+
+    nav#top {
+        flex-flow: row nowrap;
+    }
+
+    nav#top ul {
+        display: -webkit-flex;
+        display: flex;
+        background-color: rgb(51, 51, 51);
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+}
